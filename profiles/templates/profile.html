@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-center vh-100">
+    <div class="w-50">
+        <h1 class="text-center">This is Profile Page</h1>
+        {% load crispy_forms_tags %}
+        <form action="" method="POST" class="p-4 border rounded shadow-sm bg-light">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form|crispy }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
